@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  background: linear-gradient(to right, #f4f4f4 50%, #fff 50%);
+  padding-top: 5%;
+  font-family: "Lato", sans-serif;
+  color: #777;
+}
+.wrapper {
+  height: 100%;
+
+  .new_game,
+  .actions,
+  .actions_two {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-weight: 300;
+  }
+
+  .players {
+    font-weight: 300;
+    margin-top: 100px;
+    display: flex;
+    .player {
+      .name {
+        &.active {
+          font-weight: 500;
+          color: #444;
+          &:after {
+            content: " •";
+            color: #e3353b;
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+      .points_zone {
+        margin-top: 30px;
+        font-size: 5rem;
+        color: #e3353b;
+        font-weight: 200;
+      }
+
+      .current_zone {
+        text-align: center;
+        background-color: #e3353b;
+        width: fit-content;
+        margin: 150px auto;
+        padding: 1rem;
+        .text {
+          color: #565656;
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+        .points {
+          color: white;
+          font-size: 1.8rem;
+        }
+      }
+
+      font-size: 3rem;
+      width: 40%;
+      text-align: center;
+
+      &_score {
+        width: 20%;
+        margin-top: 40px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.actions {
+  margin-top: 170px;
+}
+.actions_two {
+  margin-top: 30px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+  &:hover {
+    opacity: 0.8;
+  }
+}
